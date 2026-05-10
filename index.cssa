@@ -1,0 +1,160 @@
+/* style.css */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Yu Gothic", sans-serif;
+    line-height:1.7;
+    background:#f5f5f5;
+    color:#333;
+}
+
+/* ヘッダー */
+
+header{
+    background:#111;
+    color:white;
+    padding:60px 20px;
+    text-align:center;
+}
+
+header h1{
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:18px;
+    color:#ccc;
+}
+
+/* ナビゲーション */
+
+nav{
+    background:#222;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#00bfff;
+}
+
+/* メイン */
+
+.container{
+    width:90%;
+    max-width:1000px;
+    margin:40px auto;
+}
+
+section{
+    background:white;
+    margin-bottom:30px;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+section h2{
+    margin-bottom:20px;
+    border-left:6px solid #00bfff;
+    padding-left:10px;
+    font-size:28px;
+}
+
+/* プロフィール */
+
+.profile p{
+    margin-bottom:10px;
+}
+
+/* スキル */
+
+.skills ul{
+    list-style:none;
+}
+
+.skills li{
+    background:#eee;
+    margin-bottom:10px;
+    padding:10px;
+    border-radius:5px;
+}
+
+/* 作品 */
+
+.works{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.work-card{
+    border:1px solid #ddd;
+    border-radius:10px;
+    overflow:hidden;
+    background:white;
+    transition:0.3s;
+}
+
+.work-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.work-card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.work-content{
+    padding:15px;
+}
+
+.work-content h3{
+    margin-bottom:10px;
+}
+
+.work-content a{
+    display:inline-block;
+    margin-top:10px;
+    color:#00bfff;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* フッター */
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* レスポンシブ */
+
+@media(max-width:600px){
+
+    header h1{
+        font-size:32px;
+    }
+
+    section{
+        padding:20px;
+    }
+
+}
