@@ -118,7 +118,6 @@ section h2{
     width:100%;
     height:180px;
     object-fit:cover;
-    display:block;
 }
 
 .work-content{
@@ -129,44 +128,12 @@ section h2{
     margin-bottom:10px;
 }
 
-.work-content h4{
-    margin-top:15px;
-    margin-bottom:5px;
-    font-size:16px;
-    color:#222;
-}
-
-.work-content p{
-    margin-bottom:10px;
-}
-
-.work-content video{
-    width:100%;
-    margin-top:10px;
-    border-radius:8px;
-}
-
 .work-content a{
     display:inline-block;
     margin-top:10px;
     color:#00bfff;
     text-decoration:none;
     font-weight:bold;
-}
-
-.work-content a:hover{
-    text-decoration:underline;
-}
-
-/* 連絡先 */
-
-#contact a{
-    color:#00bfff;
-    text-decoration:none;
-}
-
-#contact a:hover{
-    text-decoration:underline;
 }
 
 /* フッター */
@@ -186,18 +153,8 @@ footer{
         font-size:32px;
     }
 
-    nav a{
-        display:inline-block;
-        margin:5px 8px;
-        font-size:14px;
-    }
-
     section{
         padding:20px;
-    }
-
-    .work-card img{
-        height:160px;
     }
 
 }
