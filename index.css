@@ -137,6 +137,7 @@ section h2{
 
 .work-content video{
     width:100%;
+    height:auto;
     margin-top:10px;
     border-radius:8px;
 }
