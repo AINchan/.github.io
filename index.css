@@ -128,6 +128,21 @@ section h2{
     margin-bottom:10px;
 }
 
+/* 追加部分 */
+
+.work-content h4{
+    margin-top:15px;
+    margin-bottom:5px;
+    font-size:16px;
+    color:#222;
+}
+
+.work-content video{
+    width:100%;
+    margin-top:10px;
+    border-radius:8px;
+}
+
 .work-content a{
     display:inline-block;
     margin-top:10px;
