@@ -166,3 +166,8 @@ footer{
     }
 
 }
+
+.card-link{
+    text-decoration:none;
+    color:inherit;
+}
