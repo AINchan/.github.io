@@ -120,10 +120,41 @@
 
         .work-content{
             padding:15px;
+            color:#333;
         }
 
         .work-content h3{
             margin-bottom:10px;
+        }
+
+        .work-content p,
+        .work-content h4{
+            color:#333;
+        }
+
+        /* 作品名リンクだけ紫色 */
+        .work-title-link{
+            color:#6f3fd1;
+            text-decoration:none;
+        }
+
+        .work-title-link:hover{
+            text-decoration:underline;
+        }
+
+        .work-title-link:visited{
+            color:#6f3fd1;
+        }
+
+        /* 説明内のリンク(GitHubなど)は普通のリンク色でOK */
+        .work-content a.detail-link{
+            color:#00bfff;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+        .work-content a.detail-link:hover{
+            text-decoration:underline;
         }
 
         footer{
@@ -232,13 +263,15 @@
 
                 <div class="work-card">
 
-                    <a href="https://unityroom.com/games/primebomb" target="_blank">
-                        <img src="primebomb.png" alt="Prime Bomb 作品画像">
-                    </a>
+                    <img src="primebomb.png" alt="Prime Bomb 作品画像">
 
                     <div class="work-content">
 
-                        <h3>Prime Bomb</h3>
+                        <h3>
+                            <a href="https://unityroom.com/games/primebomb" target="_blank" class="work-title-link">
+                                Prime Bomb
+                            </a>
+                        </h3>
                     
                         <p>
                             数字と素数をテーマにしたパズルゲーム。
@@ -263,7 +296,7 @@
                     
                         <h4>プレイ動画</h4>
                     
-                        <a href="PrimeBomb.mp4" target="_blank">
+                        <a href="PrimeBomb.mp4" target="_blank" class="detail-link">
                             プレイ動画を見る
                         </a>
                     
@@ -275,39 +308,37 @@
 
                 <div class="work-card">
 
-                    <a href="https://unityroom.com/games/sisennomeikyu"
-                       target="_blank"
-                       class="card-link">
-                
-                        <img src="sisen.png" alt="視線の迷宮 作品画像">
-                
-                        <div class="work-content">
-                
-                            <h3>視線の迷宮</h3>
-                
-                            <p>
-                                視界判定を用いた脱出ゲーム。
-                                敵AIや扇形視野システムを実装。
-                                Unityroomにて公開。<br><br>
-                            </p>
-                
-                            <h4>操作方法</h4>
-                
-                            <p>
-                                WASDキーでキャラクターを操作します。<br>
-                
-                                敵の赤い視界内で動くとダメージを受け、
-                                画面下のHPバーが減少します。<br>
-                
-                                HPが0になるとゲームオーバーになります。<br>
-                
-                                出口から脱出するとステージクリアです。<br>
-                                [対応機種] iPhone,pc
-                            </p>
-                
-                        </div>
-                
-                    </a>
+                    <img src="sisen.png" alt="視線の迷宮 作品画像">
+
+                    <div class="work-content">
+
+                        <h3>
+                            <a href="https://unityroom.com/games/sisennomeikyu" target="_blank" class="work-title-link">
+                                視線の迷宮
+                            </a>
+                        </h3>
+
+                        <p>
+                            視界判定を用いた脱出ゲーム。
+                            敵AIや扇形視野システムを実装。
+                            Unityroomにて公開。<br><br>
+                        </p>
+
+                        <h4>操作方法</h4>
+
+                        <p>
+                            WASDキーでキャラクターを操作します。<br>
+
+                            敵の赤い視界内で動くとダメージを受け、
+                            画面下のHPバーが減少します。<br>
+
+                            HPが0になるとゲームオーバーになります。<br>
+
+                            出口から脱出するとステージクリアです。<br>
+                            [対応機種] iPhone,pc
+                        </p>
+
+                    </div>
 
                 </div>
 
@@ -315,46 +346,44 @@
 
                 <div class="work-card">
 
-                    <a href="https://ai-interview-app-umfd.onrender.com"
-                       target="_blank"
-                       class="card-link">
+                    <img src="ai-interview-app.png" alt="AI面接練習アプリ 作品画像">
 
-                        <img src="ai-interview-app.png" alt="AI面接練習アプリ 作品画像">
+                    <div class="work-content">
 
-                        <div class="work-content">
+                        <h3>
+                            <a href="https://ai-interview-app-umfd.onrender.com" target="_blank" class="work-title-link">
+                                AI面接練習アプリ
+                            </a>
+                        </h3>
 
-                            <h3>AI面接練習アプリ</h3>
+                        <p>
+                            就活面接の回答をAIが評価・フィードバックするWebアプリケーション。
+                            RAGを用いた面接知識の参照により、精度の高いフィードバックを実現。<br><br>
+                        </p>
 
-                            <p>
-                                就活面接の回答をAIが評価・フィードバックするWebアプリケーション。
-                                RAGを用いた面接知識の参照により、精度の高いフィードバックを実現。<br><br>
-                            </p>
+                        <h4>使用技術</h4>
 
-                            <h4>使用技術</h4>
+                        <p>
+                            FastAPI, OpenAI API (gpt-4o-mini), LangChain, ChromaDB, SQLite, Docker
+                        </p>
 
-                            <p>
-                                FastAPI, OpenAI API (gpt-4o-mini), LangChain, ChromaDB, SQLite, Docker
-                            </p>
+                        <h4>主な機能</h4>
 
-                            <h4>主な機能</h4>
+                        <p>
+                            カテゴリ別(自己PR・志望動機・学生時代・強みと弱み)の面接練習、
+                            AIによる100点満点のスコア評価、具体的なフィードバックと改善した回答例の提示、
+                            練習履歴のデータベース保存<br><br>
+                        </p>
 
-                            <p>
-                                カテゴリ別(自己PR・志望動機・学生時代・強みと弱み)の面接練習、
-                                AIによる100点満点のスコア評価、具体的なフィードバックと改善した回答例の提示、
-                                練習履歴のデータベース保存<br><br>
-                            </p>
+                        <h4>リンク</h4>
 
-                            <h4>リンク</h4>
+                        <p>
+                            <a href="https://github.com/AINchan/ai-interview-app" target="_blank" class="detail-link">
+                                GitHubリポジトリを見る
+                            </a>
+                        </p>
 
-                            <p>
-                                <a href="https://github.com/AINchan/ai-interview-app" target="_blank">
-                                    GitHubリポジトリを見る
-                                </a>
-                            </p>
-
-                        </div>
-
-                    </a>
+                    </div>
 
                 </div>
 
