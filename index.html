@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Portfolio | Game Programmer</title>
+    <title>Portfolio | AI Application Engineer</title>
 
     <style>
 
@@ -83,13 +83,26 @@
 
         .skills ul{
             list-style:none;
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+            gap:10px;
         }
 
         .skills li{
             background:#eee;
-            margin-bottom:10px;
             padding:10px;
             border-radius:5px;
+            text-align:center;
+        }
+
+        .skills .skill-group-title{
+            grid-column:1 / -1;
+            background:none;
+            padding:0;
+            font-weight:bold;
+            color:#00bfff;
+            margin-top:15px;
+            text-align:left;
         }
 
         .works{
@@ -132,7 +145,6 @@
             color:#333;
         }
 
-        /* 作品名リンクだけ紫色 */
         .work-title-link{
             color:#6f3fd1;
             text-decoration:none;
@@ -146,7 +158,6 @@
             color:#6f3fd1;
         }
 
-        /* 説明内のリンク(GitHubなど)は普通のリンク色でOK */
         .work-content a.detail-link{
             color:#00bfff;
             text-decoration:none;
@@ -155,6 +166,16 @@
 
         .work-content a.detail-link:hover{
             text-decoration:underline;
+        }
+
+        .badge{
+            display:inline-block;
+            background:#00bfff;
+            color:white;
+            font-size:12px;
+            padding:3px 10px;
+            border-radius:12px;
+            margin-bottom:10px;
         }
 
         footer{
@@ -184,9 +205,9 @@
 
     <header>
 
-        <h1>Game Programmer Portfolio</h1>
+        <h1>AI Application Engineer Portfolio</h1>
 
-        <p>Unity / C# / Game Development</p>
+        <p>Python / FastAPI / LangChain / RAG</p>
 
     </header>
 
@@ -212,17 +233,20 @@
             </p>
 
             <p>
-                Unityを用いたゲーム開発を行っています。
+                2027年4月に順天堂大学卒業見込み。スポーツ健康科学を専攻しながら、
+                独学でAIアプリケーション開発を学んでいます。
             </p>
 
             <p>
-                2027年4月に順天堂大学卒業見込み。
-                大学在学中に個人製作で5本以上のゲームを開発してきました。
+                FastAPI・LangChain・ChromaDBを用いたRAGベースのAI面接練習アプリを、
+                企画から実装・デプロイまで一人で開発しました。
             </p>
 
             <p>
-                将来的には、自分1人で理想のゲームを作れる
-                ゲームプログラマーを目指しています。
+                大学在学中にUnityで5本以上のゲームを個人開発してきた経験があり、
+                企画力・実装力・最後までやり切る力には自信があります。
+                その開発経験を活かし、現在はAIアプリケーションエンジニアとしての
+                キャリアを目指しています。
             </p>
 
         </section>
@@ -235,17 +259,20 @@
 
             <ul>
 
-                <li>C#</li>
+                <li class="skill-group-title">AI / バックエンド開発</li>
                 <li>Python</li>
-                <li>Unity</li>
-                <li>PlayFab</li>
-                <li>Git / GitHub</li>
-                <li>UI制作</li>
-                <li>シーン管理・データ管理</li>
                 <li>FastAPI</li>
                 <li>OpenAI API</li>
                 <li>LangChain</li>
+                <li>ChromaDB (RAG)</li>
+                <li>SQLite</li>
                 <li>Docker</li>
+
+                <li class="skill-group-title">その他</li>
+                <li>C#</li>
+                <li>Unity</li>
+                <li>PlayFab</li>
+                <li>Git / GitHub</li>
 
             </ul>
 
@@ -258,6 +285,53 @@
             <h2>作品</h2>
 
             <div class="works">
+
+                <!-- AI面接練習アプリ -->
+
+                <div class="work-card">
+
+                    <img src="ai-interview-app.png" alt="AI面接練習アプリ 作品画像">
+
+                    <div class="work-content">
+
+                        <span class="badge">Flagship Project</span>
+
+                        <h3>
+                            <a href="https://ai-interview-app-umfd.onrender.com" target="_blank" class="work-title-link">
+                                AI面接練習アプリ
+                            </a>
+                        </h3>
+
+                        <p>
+                            就活面接の回答をAIが評価・フィードバックするWebアプリケーション。
+                            RAGを用いた面接知識の参照により、精度の高いフィードバックを実現。<br><br>
+                        </p>
+
+                        <h4>使用技術</h4>
+
+                        <p>
+                            FastAPI, OpenAI API (gpt-4o-mini), LangChain, ChromaDB, SQLite, Docker
+                        </p>
+
+                        <h4>主な機能</h4>
+
+                        <p>
+                            カテゴリ別(自己PR・志望動機・学生時代・強みと弱み)の面接練習、
+                            AIによる100点満点のスコア評価、具体的なフィードバックと改善した回答例の提示、
+                            練習履歴のデータベース保存<br><br>
+                        </p>
+
+                        <h4>リンク</h4>
+
+                        <p>
+                            <a href="https://github.com/AINchan/ai-interview-app" target="_blank" class="detail-link">
+                                GitHubリポジトリを見る
+                            </a>
+                        </p>
+
+                    </div>
+
+                </div>
 
                 <!-- Prime Bomb -->
 
@@ -332,51 +406,6 @@
 
                             出口から脱出するとステージクリアです。<br>
                             [対応機種] iPhone,pc
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <!-- AI面接練習アプリ -->
-
-                <div class="work-card">
-
-                    <img src="ai-interview-app.png" alt="AI面接練習アプリ 作品画像">
-
-                    <div class="work-content">
-
-                        <h3>
-                            <a href="https://ai-interview-app-umfd.onrender.com" target="_blank" class="work-title-link">
-                                AI面接練習アプリ
-                            </a>
-                        </h3>
-
-                        <p>
-                            就活面接の回答をAIが評価・フィードバックするWebアプリケーション。
-                            RAGを用いた面接知識の参照により、精度の高いフィードバックを実現。<br><br>
-                        </p>
-
-                        <h4>使用技術</h4>
-
-                        <p>
-                            FastAPI, OpenAI API (gpt-4o-mini), LangChain, ChromaDB, SQLite, Docker
-                        </p>
-
-                        <h4>主な機能</h4>
-
-                        <p>
-                            カテゴリ別(自己PR・志望動機・学生時代・強みと弱み)の面接練習、
-                            AIによる100点満点のスコア評価、具体的なフィードバックと改善した回答例の提示、
-                            練習履歴のデータベース保存<br><br>
-                        </p>
-
-                        <h4>リンク</h4>
-
-                        <p>
-                            <a href="https://github.com/AINchan/ai-interview-app" target="_blank" class="detail-link">
-                                GitHubリポジトリを見る
-                            </a>
                         </p>
 
                     </div>
